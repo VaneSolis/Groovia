@@ -134,15 +134,15 @@ Elimina un usuario.
 
 ---
 
-## 🏫 Academias (Academies)
+## 🏫 Academias (academias)
 
-### GET `/api/academies`
+### GET `/api/academias`
 Obtiene todas las academias.
 
-### GET `/api/academies/:id`
+### GET `/api/academias/:id`
 Obtiene una academia específica.
 
-### POST `/api/academies`
+### POST `/api/academias`
 Crea una nueva academia.
 
 **Body (JSON):**
@@ -157,23 +157,23 @@ Crea una nueva academia.
 
 **Campos requeridos:** `nombre`, `id_instructor`
 
-### PUT `/api/academies/:id`
+### PUT `/api/academias/:id`
 Actualiza una academia existente.
 
-### DELETE `/api/academies/:id`
+### DELETE `/api/academias/:id`
 Elimina una academia.
 
 ---
 
-## 💃 Clases (Classes)
+## 💃 Clases (clases)
 
-### GET `/api/classes`
+### GET `/api/clases`
 Obtiene todas las clases.
 
-### GET `/api/classes/:id`
+### GET `/api/clases/:id`
 Obtiene una clase específica.
 
-### POST `/api/classes`
+### POST `/api/clases`
 Crea una nueva clase.
 
 **Body (JSON):**
@@ -194,23 +194,23 @@ Crea una nueva clase.
 
 **Campos requeridos:** `nombre`, `id_academia`, `id_instructor`
 
-### PUT `/api/classes/:id`
+### PUT `/api/clases/:id`
 Actualiza una clase existente.
 
-### DELETE `/api/classes/:id`
+### DELETE `/api/clases/:id`
 Elimina una clase.
 
 ---
 
-## 🎉 Eventos (Events)
+## 🎉 Eventos (eventos)
 
-### GET `/api/events`
+### GET `/api/eventos`
 Obtiene todos los eventos.
 
-### GET `/api/events/:id`
+### GET `/api/eventos/:id`
 Obtiene un evento específico.
 
-### POST `/api/events`
+### POST `/api/eventos`
 Crea un nuevo evento.
 
 **Body (JSON):**
@@ -227,10 +227,10 @@ Crea un nuevo evento.
 
 **Campos requeridos:** `nombre`
 
-### PUT `/api/events/:id`
+### PUT `/api/eventos/:id`
 Actualiza un evento existente.
 
-### DELETE `/api/events/:id`
+### DELETE `/api/eventos/:id`
 Elimina un evento.
 
 ---

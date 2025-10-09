@@ -139,7 +139,7 @@
             "url": {
               "raw": "{{base_url}}/academies",
               "host": ["{{base_url}}"],
-              "path": ["academies"]
+              "path": ["academias"]
             },
             "description": "Obtiene la lista completa de academias registradas"
           },
@@ -153,7 +153,7 @@
             "url": {
               "raw": "{{base_url}}/academies/:id",
               "host": ["{{base_url}}"],
-              "path": ["academies", ":id"],
+              "path": ["academias", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -184,7 +184,7 @@
             "url": {
               "raw": "{{base_url}}/academies",
               "host": ["{{base_url}}"],
-              "path": ["academies"]
+              "path": ["academias"]
             },
             "description": "Crea una nueva academia. Campos requeridos: nombre, id_instructor"
           },
@@ -208,7 +208,7 @@
             "url": {
               "raw": "{{base_url}}/academies/:id",
               "host": ["{{base_url}}"],
-              "path": ["academies", ":id"],
+              "path": ["academias", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -229,7 +229,7 @@
             "url": {
               "raw": "{{base_url}}/academies/:id",
               "host": ["{{base_url}}"],
-              "path": ["academies", ":id"],
+              "path": ["academias", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -255,7 +255,7 @@
             "url": {
               "raw": "{{base_url}}/classes",
               "host": ["{{base_url}}"],
-              "path": ["classes"]
+              "path": ["clases"]
             },
             "description": "Obtiene la lista completa de clases disponibles"
           },
@@ -269,7 +269,7 @@
             "url": {
               "raw": "{{base_url}}/classes/:id",
               "host": ["{{base_url}}"],
-              "path": ["classes", ":id"],
+              "path": ["clases", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -300,7 +300,7 @@
             "url": {
               "raw": "{{base_url}}/classes",
               "host": ["{{base_url}}"],
-              "path": ["classes"]
+              "path": ["clases"]
             },
             "description": "Crea una nueva clase. Campos requeridos: nombre, id_academia, id_instructor"
           },
@@ -324,7 +324,7 @@
             "url": {
               "raw": "{{base_url}}/classes/:id",
               "host": ["{{base_url}}"],
-              "path": ["classes", ":id"],
+              "path": ["clases", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -345,7 +345,7 @@
             "url": {
               "raw": "{{base_url}}/classes/:id",
               "host": ["{{base_url}}"],
-              "path": ["classes", ":id"],
+              "path": ["clases", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -371,7 +371,7 @@
             "url": {
               "raw": "{{base_url}}/events",
               "host": ["{{base_url}}"],
-              "path": ["events"]
+              "path": ["eventos"]
             },
             "description": "Obtiene la lista completa de eventos disponibles"
           },
@@ -385,7 +385,7 @@
             "url": {
               "raw": "{{base_url}}/events/:id",
               "host": ["{{base_url}}"],
-              "path": ["events", ":id"],
+              "path": ["eventos", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -416,7 +416,7 @@
             "url": {
               "raw": "{{base_url}}/events",
               "host": ["{{base_url}}"],
-              "path": ["events"]
+              "path": ["eventos"]
             },
             "description": "Crea un nuevo evento. Campo requerido: nombre"
           },
@@ -440,7 +440,7 @@
             "url": {
               "raw": "{{base_url}}/events/:id",
               "host": ["{{base_url}}"],
-              "path": ["events", ":id"],
+              "path": ["eventos", ":id"],
               "variable": [
                 {
                   "key": "id",
@@ -461,7 +461,7 @@
             "url": {
               "raw": "{{base_url}}/events/:id",
               "host": ["{{base_url}}"],
-              "path": ["events", ":id"],
+              "path": ["eventos", ":id"],
               "variable": [
                 {
                   "key": "id",
