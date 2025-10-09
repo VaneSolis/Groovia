@@ -1,0 +1,102 @@
+{
+    "usuarios": {
+        "1": {
+            "nombre": "Vanessa",
+            "apellido": "Solís",
+            "correo": "vane@example.com",
+            "contraseña": "hashed_password",
+            "genero": "Femenino",
+            "fecha_nacimiento": "2000-03-10",
+            "pais": "México",
+            "ciudad": "Mérida",
+            "foto_perfil": "https://example.com/vane.jpg",
+            "tipo_usuario": "Instructor",
+            "academias": {
+                "1": {
+                    "nombre_academia": "Studio Ritmo",
+                    "ubicacion": "Mérida, Yucatán",
+                    "descripcion": "Academia enfocada en ritmos latinos.",
+                    "clases": {
+                        "1": {
+                            "nombre_clase": "Salsa Intermedio",
+                            "estilo": "Salsa",
+                            "tipo": "Grupo",
+                            "periodicidad": "Semanal",
+                            "dia_hora": "2025-10-15T18:00:00",
+                            "costo_clase": 120.0,
+                            "costo_mensual": 400.0,
+                            "walk_in": true,
+                            "inscripciones": {
+                                "1": {
+                                    "id_alumno": "2",
+                                    "fecha_inscripcion": "2025-10-01",
+                                    "estado": "Activo"
+                                }
+                            },
+                            "asistencias": {
+                                "1": {
+                                    "id_alumno": "2",
+                                    "fecha": "2025-10-08",
+                                    "presente": true
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "videos": {
+                "1": {
+                    "titulo": "Tutorial de pasos básicos de salsa",
+                    "descripcion": "Aprende los movimientos esenciales para iniciar en la salsa.",
+                    "url_video": "https://example.com/video1",
+                    "estilo": "Salsa",
+                    "fecha_publicacion": "2025-10-07",
+                    "exclusivo": false
+                }
+            },
+            "mensajes": {
+                "1": {
+                    "id_destinatario": "2",
+                    "contenido": "Hola, ¿te gustaría practicar juntos?",
+                    "fecha_envio": "2025-10-09T14:00:00"
+                }
+            },
+            "pagos": {
+                "1": {
+                    "id_clase": "1",
+                    "monto": 120.0,
+                    "fecha_pago": "2025-10-02",
+                    "metodo": "Tarjeta",
+                    "estado": "Pagado"
+                }
+            }
+        },
+        "2": {
+            "nombre": "Carlos",
+            "apellido": "López",
+            "correo": "carlos@example.com",
+            "contraseña": "hashed_password",
+            "genero": "Masculino",
+            "fecha_nacimiento": "1998-07-25",
+            "pais": "México",
+            "ciudad": "Cancún",
+            "tipo_usuario": "Alumno"
+        }
+    },
+    "eventos": {
+        "1": {
+            "nombre_evento": "Noche de Bachata",
+            "descripcion": "Evento social para bailar bachata y salsa.",
+            "fecha_hora": "2025-11-10T20:00:00",
+            "ubicacion": "CDMX",
+            "costo": 200.0,
+            "tipo_evento": "Social",
+            "participantes": {
+                "1": {
+                    "id_usuario": "2",
+                    "rol": "Asistente"
+                }
+            }
+        }
+    }
+}
