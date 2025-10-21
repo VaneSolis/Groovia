@@ -1,0 +1,483 @@
+{
+  "info": {
+    "name": "SocialDance API",
+    "description": "Colección completa de la API de SocialDance - Aplicación de baile social",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3001",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "AUTH",
+      "description": "Endpoints de autenticación",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"nuevo@usuario.com\",\n  \"password\": \"123456\",\n  \"displayName\": \"Juan Pérez\",\n  \"phone\": \"+1234567890\",\n  \"danceLevel\": \"Principiante\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/logout",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "logout"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify Token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/verify",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "verify"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "USUARIOS",
+      "description": "Endpoints de gestión de usuarios",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/users",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/users/2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "users", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"Nombre Actualizado\",\n  \"phone\": \"+9876543210\",\n  \"danceLevel\": \"Intermedio\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/users/2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "users", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/users/2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "users", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search by Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/users/search/email?email=carlos@example.com",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "users", "search", "email"],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "carlos@example.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users by Dance Level",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/users/level/Principiante",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "users", "level", "Principiante"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ACADEMIAS",
+      "description": "Endpoints de gestión de academias",
+      "item": [
+        {
+          "name": "Get All Academies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/academias",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "academias"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Academy by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/academias/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "academias", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Academy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Academia de Baile Nueva\",\n  \"description\": \"Academia especializada en salsa y bachata\",\n  \"location\": {\n    \"address\": \"Calle Principal 123\",\n    \"city\": \"Ciudad de México\",\n    \"country\": \"México\"\n  },\n  \"styles\": [\"Salsa\", \"Bachata\", \"Merengue\"],\n  \"phone\": \"+52 55 1234 5678\",\n  \"email\": \"info@academia.com\",\n  \"website\": \"https://academia.com\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/academias",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "academias"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Academy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Academia Actualizada\",\n  \"description\": \"Descripción actualizada\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/academias/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "academias", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Academy",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/academias/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "academias", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "CLASES",
+      "description": "Endpoints de gestión de clases",
+      "item": [
+        {
+          "name": "Get All Classes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/clases",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "clases"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Class by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/clases/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "clases", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Class",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Salsa Básica\",\n  \"description\": \"Clase de salsa para principiantes\",\n  \"style\": \"Salsa\",\n  \"level\": \"Principiante\",\n  \"academyId\": \"academy123\",\n  \"instructor\": \"Carlos Pérez\",\n  \"schedule\": {\n    \"day\": \"Lunes\",\n    \"startTime\": \"19:00\",\n    \"endTime\": \"20:30\",\n    \"duration\": 90\n  },\n  \"location\": {\n    \"address\": \"Calle Principal 123\",\n    \"city\": \"Ciudad de México\"\n  },\n  \"price\": 150,\n  \"maxStudents\": 20,\n  \"currentStudents\": 0\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/clases",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "clases"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Class",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Salsa Intermedia\",\n  \"level\": \"Intermedio\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/clases/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "clases", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Class",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/clases/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "clases", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "EVENTOS",
+      "description": "Endpoints de gestión de eventos",
+      "item": [
+        {
+          "name": "Get All Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/eventos",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "eventos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Event by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/eventos/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "eventos", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Noche de Salsa\",\n  \"description\": \"Evento social de salsa y bachata\",\n  \"date\": \"2024-02-15T20:00:00Z\",\n  \"location\": {\n    \"name\": \"Club de Baile Central\",\n    \"address\": \"Av. Principal 456\",\n    \"city\": \"Ciudad de México\"\n  },\n  \"styles\": [\"Salsa\", \"Bachata\"],\n  \"price\": 200,\n  \"maxCapacity\": 100,\n  \"currentAttendees\": 0,\n  \"organizer\": \"Academia de Baile Central\",\n  \"contact\": {\n    \"phone\": \"+52 55 9876 5432\",\n    \"email\": \"eventos@academia.com\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/eventos",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "eventos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Event",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Noche de Salsa Actualizada\",\n  \"price\": 250\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/eventos/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "eventos", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Event",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/eventos/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "eventos", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "HEALTH",
+      "description": "Endpoints de estado del servidor",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "health"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
